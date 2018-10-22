@@ -1,0 +1,138 @@
+object fmMain: TfmMain
+  Left = 305
+  Top = 139
+  Width = 1188
+  Height = 632
+  Align = alCustom
+  Caption = #1043#1083#1072#1074#1085#1072#1103' '#1092#1086#1088#1084#1072
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  Menu = MainMenu1
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnActivate = FormActivate
+  OnClose = FormClose
+  PixelsPerInch = 96
+  TextHeight = 13
+  object dbgInfo: TDBGrid
+    Left = 0
+    Top = 453
+    Width = 1172
+    Height = 120
+    Align = alBottom
+    DataSource = dsInfo
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
+    ReadOnly = True
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+    OnTitleClick = dbgInfoTitleClick
+  end
+  object TabControl1: TTabControl
+    Left = 0
+    Top = 0
+    Width = 1172
+    Height = 453
+    Align = alClient
+    TabOrder = 1
+    Tabs.Strings = (
+      #1055#1088#1080#1093#1086#1076#1085#1099#1077' '#1085#1072#1082#1083#1072#1076#1085#1099#1077
+      #1057#1093#1077#1084#1099' '#1089#1073#1086#1088#1082#1080)
+    TabIndex = 0
+    OnChange = TabControl1Change
+    object dbgNakl: TDBGrid
+      Left = 4
+      Top = 24
+      Width = 1164
+      Height = 425
+      Align = alClient
+      BiDiMode = bdRightToLeftNoAlign
+      DataSource = dsNakl
+      Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
+      ParentBiDiMode = False
+      ReadOnly = True
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Style = []
+      OnTitleClick = dbgNaklTitleClick
+    end
+  end
+  object MainMenu1: TMainMenu
+    Left = 80
+    Top = 56
+    object N1: TMenuItem
+      Caption = #1044#1072#1085#1085#1099#1077
+      object N3: TMenuItem
+        Caption = #1050#1086#1084#1087#1083#1077#1082#1090#1091#1102#1097#1080#1077
+        OnClick = N3Click
+      end
+      object N5: TMenuItem
+        Caption = #1060#1080#1088#1084#1072' '#1087#1086#1089#1090#1072#1074#1097#1080#1082
+        OnClick = N5Click
+      end
+      object N16: TMenuItem
+        Caption = #1052#1077#1073#1077#1083#1100
+        OnClick = N16Click
+      end
+    end
+    object N6: TMenuItem
+      Caption = #1053#1072#1082#1083#1072#1076#1085#1072#1103
+      object N7: TMenuItem
+        Caption = #1044#1086#1073#1072#1074#1080#1090#1100
+        OnClick = N7Click
+      end
+      object N8: TMenuItem
+        Caption = #1059#1076#1072#1083#1080#1090#1100
+        OnClick = N8Click
+      end
+      object N9: TMenuItem
+        Caption = '-'
+      end
+      object N10: TMenuItem
+        Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1080#1085#1092#1086#1088#1084#1072#1094#1080#1102
+        OnClick = N10Click
+      end
+      object N11: TMenuItem
+        Caption = #1059#1076#1072#1083#1080#1090#1100' '#1080#1085#1092#1086#1088#1084#1072#1094#1080#1102
+        OnClick = N11Click
+      end
+      object N12: TMenuItem
+        Caption = '-'
+      end
+    end
+    object N2: TMenuItem
+      Caption = #1054#1090#1095#1077#1090' Excel'
+      OnClick = N2Click
+    end
+    object N15: TMenuItem
+      Caption = #1054#1090#1095#1077#1090
+      OnClick = N15Click
+    end
+    object Word2: TMenuItem
+      Caption = 'Word'
+      OnClick = Word2Click
+    end
+    object N4: TMenuItem
+      Caption = #1042#1099#1093#1086#1076
+      OnClick = N4Click
+    end
+  end
+  object dsNakl: TDataSource
+    Left = 288
+    Top = 136
+  end
+  object dsInfo: TDataSource
+    Left = 384
+    Top = 360
+  end
+end
